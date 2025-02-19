@@ -77,4 +77,11 @@ public class UserController {
 
         return "if-unless";
     }
+
+    @GetMapping("switch-case")
+    public String switchCase(Model model) {
+        User user = new User("Ankan", "ankan@google.com", "Admin", "Male");
+        model.addAttribute(user);
+        return "switch-case";
+    }
 }
